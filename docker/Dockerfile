@@ -1,6 +1,8 @@
-FROM pytorch/pytorch:1.7.0-cuda11.2-cudnn8-devel
+FROM pytorch/pytorch:1.12.1-cuda11.3-cudnn8-devel
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y vim && apt-get install -y git
+RUN apt install -y tmux
+
 RUN pip install --upgrade pip
 RUN pip install matplotlib seaborn scikit-learn scipy pandas numpy jupyter
 
